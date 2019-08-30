@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Guru</title>
+</head>
+<body>
+<h1>Author list</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <!--/*@thymesVar id="authors" type="java.lang.Iterable<guru.springframework.spring5webapp.model.Author>"*/-->
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}">123</td>
+        <td th:text="${author.firstName}">default firstName</td>
+        <td th:text="${author.lastName}">default lastName</td>
+    </tr>
+</table>
+</body>
+</html>
